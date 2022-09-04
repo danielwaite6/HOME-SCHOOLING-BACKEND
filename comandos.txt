@@ -1,0 +1,9 @@
+docker build -t home_scholl .
+
+docker run -p 3333:3333 home_scholl
+
+docker exec -it blissful_ellis /bin/bash
+
+docker-compose up
+
+docker-compose down -v --rmi local
