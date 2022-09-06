@@ -1,7 +1,8 @@
+import "reflect-metadata"
 import express from 'express'
+import "./database"
 import { router } from './routes'
 
-import "./database"
 
 const app = express();
 

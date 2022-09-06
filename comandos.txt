@@ -6,4 +6,18 @@ docker exec -it blissful_ellis /bin/bash
 
 docker-compose up
 
+docker-compose up -d
+
+docker ps
+
+docker rm <name_image>
+
+docker start
+
+docker stop <name_image>
+
 docker-compose down -v --rmi local
+
+yarn typeorm migration:create -n CreateCategories
+
+yarn typeorm migration:run
