@@ -1,11 +1,11 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm'
 import { v4 as uuidV4 } from 'uuid'
 
-@Entity("specifications")
-class Specification {
+@Entity("cars")
+class Car {
 
     @PrimaryColumn()
-    id?: string;
+    id: string;
 
     @Column()
     name: string;
@@ -13,13 +13,16 @@ class Specification {
     @Column()
     description: string;
 
+    category_id: string;
+
     @CreateDateColumn()
     created_at: Date;
 
     constructor() {
         if (!this.id) {
             this.id = uuidV4()
+            this.created_at = new Date()
         }
     }
 }
-export { Specification }
+export { Car }
