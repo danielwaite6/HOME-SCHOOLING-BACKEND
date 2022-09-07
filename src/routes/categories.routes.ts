@@ -1,18 +1,17 @@
 import { Router } from 'express'
-import createCategoryController from '../modules/cars/useCases/createCategory'
-import { listCategoriesController } from '../modules/cars/useCases/listCategories'
+import { CreateCategoryController } from '../modules/cars/useCases/createCategory/CreateCategoryController'
+import { ListCategoriesController } from '../modules/cars/useCases/listCategories/ListCategoriesController'
 
 
 const categoriesRoutes = Router()
 // Repository --> Camada de acesso a dados.
 
+const createCategoryController = new CreateCategoryController()
+const listCategoriesController = new ListCategoriesController()
 
-categoriesRoutes.post('/', (req, res) => {
-    return createCategoryController().handle(req, res)
-})
 
-categoriesRoutes.get('/', (req, res) => {
-    return listCategoriesController.handle(req, res)
-})
+categoriesRoutes.post('/', createCategoryController.handle)
+
+categoriesRoutes.get('/', listCategoriesController.handle)
 
 export { categoriesRoutes }
