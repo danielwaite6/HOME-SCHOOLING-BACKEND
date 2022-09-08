@@ -21,6 +21,11 @@ export class CreateCars1662516676249 implements MigrationInterface {
                         type: "varchar",
                     },
                     {
+                        name: "available",
+                        type: "boolean",
+                        default: true,
+                    },
+                    {
                         name: "category_id",
                         type: "uuid",
                         isNullable: true,
