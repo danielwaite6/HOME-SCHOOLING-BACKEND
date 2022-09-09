@@ -1,8 +1,10 @@
 import { container } from 'tsyringe'
 import { ICarsRepository } from '../../modules/cars/repositories/ICarsRepository'
 import { ICategoriesRepository } from '../../modules/cars/repositories/ICategoriesRepository'
+import { IFilhosRepository } from '../../modules/cars/repositories/IFilhosRepository'
 import { CarsRepository } from '../../modules/cars/repositories/implementations/CarsRepository'
 import { CategoriesRepository } from '../../modules/cars/repositories/implementations/CategoriesRepository'
+import { FilhosRepository } from '../../modules/cars/repositories/implementations/FilhosRepository'
 import { SpecificationRepository } from '../../modules/cars/repositories/implementations/SpecificationRepository'
 import { ISpecificationRepository } from '../../modules/cars/repositories/ISpecificationRepository'
 
@@ -16,4 +18,8 @@ container.registerSingleton<ISpecificationRepository>(
 
 container.registerSingleton<ICarsRepository>(
     "CarsRepository", CarsRepository
+)
+
+container.registerSingleton<IFilhosRepository>(
+    "FilhosRepository", FilhosRepository
 )
