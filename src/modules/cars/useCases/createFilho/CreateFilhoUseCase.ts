@@ -16,10 +16,10 @@ class CreateFilhoUseCase {
 
     async execute({ mae_id, name }: IRequest): Promise<void> {
 
-        const filhoAlreadyExists = await this.filhosRepository.findByName(name)
+        /*const filhoAlreadyExists = await this.filhosRepository.findByName(name)
         if (filhoAlreadyExists) {
-            throw new Error("Specification Already Exists")
-        }
+            throw new Error("Specification Already Exists");
+        }*/
 
         await this.filhosRepository.create({ mae_id, name })
     }

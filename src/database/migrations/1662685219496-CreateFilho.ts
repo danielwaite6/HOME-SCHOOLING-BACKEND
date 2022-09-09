@@ -18,7 +18,7 @@ export class CreateFilho1662685219496 implements MigrationInterface {
                     },
                     {
                         name: "mae_id",
-                        type: "uuid",
+                        type: "varchar",
                         isNullable: true,
                     },
                 ],
