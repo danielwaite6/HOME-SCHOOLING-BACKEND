@@ -21,3 +21,6 @@ docker-compose down -v --rmi local
 yarn typeorm migration:create -n CreateCategories
 
 yarn typeorm migration:run
+
+npm install --save-dev typescript     ===== MODO DESENVOLVIMENTO
+npm install --save uuid               ===== MODO PRODUCAO
