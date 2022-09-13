@@ -1,6 +1,16 @@
-import { createConnection, getConnectionOptions } from 'typeorm';
+import { createConnection, getConnectionOptions, Connection } from 'typeorm';
 
-interface IOptions {
+export default async (): Promise<Connection> => {
+    const defaultOptions = await getConnectionOptions()
+
+    return createConnection(
+        Object.assign(defaultOptions, {
+            database: "postgres"
+        })
+    )
+}
+
+/**interface IOptions {
     host: string;
 }
 
@@ -11,3 +21,4 @@ getConnectionOptions().then(options => {
         ...options,
     });
 });
+ */
