@@ -12,8 +12,8 @@ router.use("/cars", carsRoutes)
 router.use("/filhos", filhosRoutes)
 
 
-router.use("/teste", () => {
-    console.log("CONSEGUI ACESSAR A ROTA TESTE");
+router.use("/teste", (req, res) => {
+    return res.send(200)
 })
 
 export { router }
