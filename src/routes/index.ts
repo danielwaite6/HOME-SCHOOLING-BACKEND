@@ -2,7 +2,7 @@ import { Router } from 'express'
 import { categoriesRoutes } from './categories.routes'
 import { specificationsRoutes } from './specifications.routes'
 import { carsRoutes } from './cars.routes'
-import { filhosRoutes } from './filhos.routes'
+import { filhosRoutes } from './filhos.routes';
 
 const router = Router()
 
