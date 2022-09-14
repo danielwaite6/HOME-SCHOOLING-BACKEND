@@ -7,8 +7,8 @@ const carsRoutes = Router()
 const createCarController = new CreateCarController()
 const listCarsController = new ListCarsController()
 
-carsRoutes.post('/', createCarController.handle)
-carsRoutes.get('/', listCarsController.handle)
+carsRoutes.post('/', createCarController.handle);
+carsRoutes.get('/', listCarsController.handle);
 
 
 export { carsRoutes }
