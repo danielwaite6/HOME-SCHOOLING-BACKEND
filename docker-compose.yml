@@ -6,7 +6,7 @@ services:
     container_name: database
     restart: always
     ports:
-      - 65432:5432
+      - 5432:5432
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
@@ -29,6 +29,4 @@ services:
 
 volumes:
   pgdata:
-    driver: local
-  redis_data:
     driver: local
