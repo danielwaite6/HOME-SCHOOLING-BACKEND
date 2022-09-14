@@ -11,4 +11,9 @@ router.use("/specifications", specificationsRoutes)
 router.use("/cars", carsRoutes)
 router.use("/filhos", filhosRoutes)
 
+
+router.use("/teste", () => {
+    console.log("CONSEGUI ACESSAR A ROTA TESTE");
+})
+
 export { router }
