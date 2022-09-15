@@ -13,7 +13,7 @@ router.use("/filhos", filhosRoutes)
 
 
 router.use("/teste", (req, res) => {
-    return res.send(201).json({ ok: "Its a success" })
+    return res.json({ ok: "Its a success" })
 })
 
 export { router }
