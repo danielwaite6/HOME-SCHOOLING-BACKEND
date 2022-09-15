@@ -9,7 +9,7 @@
         "./dist/database/migrations/*.js"
     ],
     "entities": [
-        "./dist/modules/**/entities/*.js"
+        "./dist/modules/cars/entities/*.js"
     ],
     "cli": {
         "migrationsDir": "./dist/database/migrations"
