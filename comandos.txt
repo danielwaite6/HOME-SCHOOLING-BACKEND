@@ -24,3 +24,15 @@ yarn typeorm migration:run
 
 npm install --save-dev typescript     ===== MODO DESENVOLVIMENTO
 npm install --save uuid               ===== MODO PRODUCAO
+
+
+docker exec -it database psql -U postgres
+
+postgres-# \c postgres
+You are now connected to database "postgres" as user "postgres".
+
+
+## Lista todas as tabelas do banco selecionado
+postgres-# \dt
+
+app@ip-172-31-12-3:~/HOME-SCHOOLING-BACKEND$ ./node_modules/.bin/typeorm migration:run
