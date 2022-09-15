@@ -36,3 +36,8 @@ You are now connected to database "postgres" as user "postgres".
 postgres-# \dt
 
 app@ip-172-31-12-3:~/HOME-SCHOOLING-BACKEND$ ./node_modules/.bin/typeorm migration:run
+
+
+
+
+matar todas as instâncias NODEJS:  killall node

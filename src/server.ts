@@ -1,10 +1,14 @@
 import "reflect-metadata"
 import express from 'express';
 //import cors from 'cors';
-import "./database"
+//import "./database"
+
+import createDbConnection from "./database"
+
 import "./shared/container"
 import { router } from './routes'
 
+createDbConnection()
 
 const app = express();
 app.use(express.json());
