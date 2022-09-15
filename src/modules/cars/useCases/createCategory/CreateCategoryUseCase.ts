@@ -25,7 +25,7 @@ class CreateCategoryUseCase {
             }
             await this.categoriesRepository.create({ name, description })
         } catch (error) {
-            throw new Error(error)
+            throw new Error(error);
         }
 
 
