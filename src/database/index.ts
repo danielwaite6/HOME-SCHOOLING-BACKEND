@@ -5,7 +5,15 @@ export default async (): Promise<Connection> => {
 
     return createConnection(
         Object.assign(defaultOptions, {
-            database: "postgres"
+            name: "default",
+            database: "postgres",
+            type: "postgres",
+            port: "5432",
+            host: "localhost",
+            username: "postgres",
+            password: "postgres",
+
+
         })
     )
 }
