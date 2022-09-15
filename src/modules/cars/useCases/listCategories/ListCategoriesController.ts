@@ -7,8 +7,8 @@ class ListCategoriesController {
     async handle(req: Request, res: Response): Promise<Response> {
         const listCategoriesUseCase = container.resolve(ListCategoriesUseCase)
         const all = await listCategoriesUseCase.execute()
-        console.log("ListCategoriesController");
 
+        //return res.send().json({ ok: "deu certo" })
         return res.json(all)
     }
 
