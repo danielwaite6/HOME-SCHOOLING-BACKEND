@@ -18,10 +18,17 @@ class CreateCarUseCase {
 
     async execute({ description, name, category_id }: IRequest): Promise<Car> {
 
-        const car = await this.carsRepository.create({
-            name, description, category_id,
-        })
-        return car
+        try {
+            const car = await this.carsRepository.create({
+                name, description, category_id,
+            })
+            return car
+        } catch (error) {
+            throw new Error(error);
+        }
+
+
+        //return car
     }
 }
 export { CreateCarUseCase }

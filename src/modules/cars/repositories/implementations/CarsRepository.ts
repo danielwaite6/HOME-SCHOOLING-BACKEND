@@ -1,4 +1,5 @@
-import { getRepository, Repository } from "typeorm";
+import { Repository } from "typeorm";
+import dataSource from "../../../../database";
 import { ICreateCarDTO } from "../../dtos/ICreateCarDTO";
 import { Car } from "../../entities/Car";
 import { ICarsRepository } from "../ICarsRepository";
@@ -8,7 +9,7 @@ class CarsRepository implements ICarsRepository {
     private repository: Repository<Car>
 
     constructor() {
-        this.repository = getRepository(Car)
+        this.repository = dataSource.getRepository(Car)
     }
 
 
