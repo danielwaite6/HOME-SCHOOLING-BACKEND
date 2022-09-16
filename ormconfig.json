@@ -6,12 +6,12 @@
     "password": "postgres",
     "database": "postgres",
     "migrations": [
-        "./dist/database/migrations/*.js"
+        "./src/database/migrations/*.ts"
     ],
     "entities": [
-        "./dist/modules/cars/entities/*.js"
+        "./src/modules/**/entities/*.ts"
     ],
     "cli": {
-        "migrationsDir": "./dist/database/migrations"
+        "migrationsDir": "./src/database/migrations"
     }
 }

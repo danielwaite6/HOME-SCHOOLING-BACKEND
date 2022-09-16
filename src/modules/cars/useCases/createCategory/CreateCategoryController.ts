@@ -12,7 +12,9 @@ class CreateCategoryController {
 
         await createCategoryUseCase.execute({ name, description })
 
-        return res.json({ name, description })
+        return res.status(200).send()
+
+        //return res.json({ name, description })
     }
 
 }

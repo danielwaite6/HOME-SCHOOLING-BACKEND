@@ -18,6 +18,10 @@ docker stop <name_image>
 
 docker-compose down -v --rmi local
 
+docker-compose up --force-recreate
+
+docker exec database cat /etc/hosts
+
 yarn typeorm migration:create -n CreateCategories
 
 yarn typeorm migration:run
@@ -38,6 +42,8 @@ postgres-# \dt
 app@ip-172-31-12-3:~/HOME-SCHOOLING-BACKEND$ ./node_modules/.bin/typeorm migration:run
 
 
-
+https://github.com/rocketseat-education/ignite-nodejs-rentx/blob/feat/update-typeorm/src/shared/infra/typeorm/index.ts
 
 matar todas as instâncias NODEJS:  killall node
+
+
