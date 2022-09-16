@@ -10,7 +10,7 @@ import { CreateSpecifications1662515145406 } from '../database/migrations/166251
 import { CreateFilho1662685219496 } from '../database/migrations/1662685219496-CreateFilho';
 
 
-const dataSource = new DataSource({
+export const dataSource = new DataSource({
     type: "postgres",
     port: 5432,
     username: "postgres",
@@ -24,10 +24,10 @@ const dataSource = new DataSource({
         CreateFilho1662685219496,
     ],
 });
-
+/*
 export function createConnection(): Promise<DataSource> {
     return dataSource.setOptions({}).initialize();
-}
+}*/
 
 export default dataSource;
 
