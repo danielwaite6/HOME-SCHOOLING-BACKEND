@@ -10,17 +10,18 @@ import { CreateSpecifications1662515145406 } from '../database/migrations/166251
 import { CreateFilho1662685219496 } from '../database/migrations/1662685219496-CreateFilho';
 
 
+
 export const dataSource = new DataSource({
     type: "postgres",
     port: 5432,
     username: "postgres",
     password: "postgres",
     database: "postgres",
-    entities: [Category, Car, Specification, Filho],
+    entities: [Category, Specification, Car, Filho],
     migrations: [
         CreateCategories1662308680053,
-        CreateCars1662516676249,
         CreateSpecifications1662515145406,
+        CreateCars1662516676249,
         CreateFilho1662685219496,
     ],
 });

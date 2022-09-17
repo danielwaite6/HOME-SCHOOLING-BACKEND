@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import dataSource from "../../../../database";
+import { dataSource } from "../../../../database";
 import { Category } from "../../entities/Category"
 import { ICategoriesRepository } from "../ICategoriesRepository";
 
@@ -14,6 +14,7 @@ class CategoriesRepository implements ICategoriesRepository {
     private repository: Repository<Category>
 
     constructor() {
+
         this.repository = dataSource.getRepository(Category);
     }
 
