@@ -1,5 +1,5 @@
 import { Repository } from 'typeorm'
-import dataSource from "../../../../database";
+import { dataSource } from "../../../../database";
 import { Filho } from '../../entities/Filho';
 import { IFilhosRepository, ICreateFilhosDTO } from '../IFilhosRepository';
 
