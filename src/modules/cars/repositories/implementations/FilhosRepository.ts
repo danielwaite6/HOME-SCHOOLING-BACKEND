@@ -22,5 +22,10 @@ class FilhosRepository implements IFilhosRepository {
         return filho
     }
 
+    async list(): Promise<Filho[]> {
+        const filhos = await this.repository.find()
+        return filhos
+    }
+
 }
 export { FilhosRepository }

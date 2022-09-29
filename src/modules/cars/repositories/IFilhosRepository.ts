@@ -7,8 +7,9 @@ interface ICreateFilhosDTO {
 
 interface IFilhosRepository {
 
-    create({ mae_id, name }: ICreateFilhosDTO): Promise<void>
-    findByName(name: string): Promise<Filho>
+    create({ mae_id, name }: ICreateFilhosDTO): Promise<void>;
+    findByName(name: string): Promise<Filho>;
+    list(): Promise<Filho[]>;
 }
 
 
