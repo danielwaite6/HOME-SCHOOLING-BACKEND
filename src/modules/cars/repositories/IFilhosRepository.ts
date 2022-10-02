@@ -10,6 +10,7 @@ interface IFilhosRepository {
     create({ mae_id, name }: ICreateFilhosDTO): Promise<void>;
     findByName(name: string): Promise<Filho>;
     list(): Promise<Filho[]>;
+    delete(id: string): Promise<void>;
 }
 
 

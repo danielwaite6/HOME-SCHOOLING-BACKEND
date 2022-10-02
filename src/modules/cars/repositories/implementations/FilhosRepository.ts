@@ -27,5 +27,9 @@ class FilhosRepository implements IFilhosRepository {
         return filhos
     }
 
+    async delete(id: string): Promise<void> {
+        await this.repository.delete(id)
+    }
+
 }
 export { FilhosRepository }
