@@ -29,7 +29,6 @@ class FilhosRepository implements IFilhosRepository {
 
     async delete(id: string): Promise<void> {
         const filho = await this.repository.delete(id)
-        console.log('Filho deleteado: ', filho);
     }
 
 }

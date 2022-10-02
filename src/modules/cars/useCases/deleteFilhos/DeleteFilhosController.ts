@@ -9,9 +9,10 @@ class DeleteFilhosController {
 
         try {
             const deleteFilhosUseCase = container.resolve(DeleteFilhosUseCase)
-            await deleteFilhosUseCase.execute(id)
+            const filho = await deleteFilhosUseCase.execute(id);
+            return res.json(filho)
         } catch (error) {
-            return res.json({ ok: "OK" })
+
         }
 
     }
