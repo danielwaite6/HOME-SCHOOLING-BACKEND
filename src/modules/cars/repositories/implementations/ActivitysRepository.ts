@@ -26,7 +26,11 @@ class ActivitysRepository implements IActivitysRepository {
         }
 
 
-        //console.log(filho_id, name, mae_id, atividadeEducativa, observacoes, dia, hora);
+    }
+
+    async list(): Promise<Activitys[]> {
+        const activity = await this.repository.find()
+        return activity
     }
     //create(data: ICreateActivityDTO): Promise<Activitys>
     /*async create({ atividadeEducativa, dia, filho_id, hora, mae_id, name, observacoes }: ICreateActivityDTO): Promise<Activitys> {

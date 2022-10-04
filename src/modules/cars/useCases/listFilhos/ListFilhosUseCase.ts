@@ -12,7 +12,6 @@ class ListFilhosUseCase {
 
     async execute(): Promise<Filho[]> {
         const filhos = await this.filhosRepository.list()
-
         return filhos
     }
 }
