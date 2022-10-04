@@ -1,5 +1,6 @@
-import { IFilhosRepository } from "../../repositories/IFilhosRepository";
 import { inject, injectable } from 'tsyringe'
+import "reflect-metadata";
+import { IFilhosRepository } from "../../repositories/IFilhosRepository";
 import { Filho } from "modules/cars/entities/Filho";
 
 @injectable()

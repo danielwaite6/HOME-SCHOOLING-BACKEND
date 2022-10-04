@@ -1,6 +1,7 @@
 import { IFilhosRepository } from "../../repositories/IFilhosRepository";
 import { inject, injectable } from 'tsyringe'
-import { Filho } from "modules/cars/entities/Filho";
+import "reflect-metadata";
+//import { Filho } from "modules/cars/entities/Filho";
 
 @injectable()
 class DeleteFilhosUseCase {

@@ -1,4 +1,5 @@
 import { inject, injectable } from 'tsyringe'
+import "reflect-metadata";
 import { IFilhosRepository } from '../../repositories/IFilhosRepository'
 
 interface IRequest {

@@ -1,6 +1,8 @@
-import { Activitys } from 'modules/cars/entities/Activitys';
+import "reflect-metadata";
 import { inject, injectable } from 'tsyringe'
 import { IActivitysRepository } from '../../repositories/IActivitysRepository'
+import { Activitys } from 'modules/cars/entities/Activitys';
+
 
 interface IRequest {
     filho_id: string,

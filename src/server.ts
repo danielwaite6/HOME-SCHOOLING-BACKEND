@@ -1,9 +1,10 @@
 import "reflect-metadata"
-import cors from "cors";
+import "./shared/container"
+//import "../src/shared/container"
 import express from 'express';
+import cors from "cors";
 //import "./database"
 import { dataSource } from "./database"
-import "./shared/container"
 import { router } from './routes'
 
 

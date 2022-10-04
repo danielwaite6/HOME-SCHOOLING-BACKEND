@@ -1,4 +1,5 @@
 import { inject, injectable } from 'tsyringe'
+import "reflect-metadata";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {

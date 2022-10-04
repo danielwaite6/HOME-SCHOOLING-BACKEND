@@ -1,23 +1,23 @@
 import { container } from 'tsyringe'
 
-import { ICategoriesRepository } from 'modules/cars/repositories/ICategoriesRepository'
-import { CategoriesRepository } from 'modules/cars/repositories/implementations/CategoriesRepository'
+import { CategoriesRepository } from '../../modules/cars/repositories/implementations/CategoriesRepository'
+import { ICategoriesRepository } from '../../modules/cars/repositories/ICategoriesRepository'
 
-import { SpecificationRepository } from 'modules/cars/repositories/implementations/SpecificationRepository'
-import { ISpecificationRepository } from 'modules/cars/repositories/ISpecificationRepository'
-
-
-import { ICarsRepository } from 'modules/cars/repositories/ICarsRepository'
-import { CarsRepository } from 'modules/cars/repositories/implementations/CarsRepository'
+import { SpecificationRepository } from '../../modules/cars/repositories/implementations/SpecificationRepository'
+import { ISpecificationRepository } from '../../modules/cars/repositories/ISpecificationRepository'
 
 
-import { IFilhosRepository } from 'modules/cars/repositories/IFilhosRepository'
-import { FilhosRepository } from 'modules/cars/repositories/implementations/FilhosRepository'
+import { ICarsRepository } from '../../modules/cars/repositories/ICarsRepository'
+import { CarsRepository } from '../../modules/cars/repositories/implementations/CarsRepository'
 
 
-import { IActivitysRepository } from 'modules/cars/repositories/IActivitysRepository'
-import { ActivitysRepository } from 'modules/cars/repositories/implementations/ActivitysRepository'
-//entities: [Category, Specification, Car, Filho, Activitys],
+import { IFilhosRepository } from '../../modules/cars/repositories/IFilhosRepository'
+import { FilhosRepository } from '../../modules/cars/repositories/implementations/FilhosRepository'
+
+
+import { IActivitysRepository } from '../../modules/cars/repositories/IActivitysRepository'
+import { ActivitysRepository } from '../../modules/cars/repositories/implementations/ActivitysRepository'
+
 
 container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository", CategoriesRepository
