@@ -31,5 +31,9 @@ class FilhosRepository implements IFilhosRepository {
         const filho = await this.repository.delete(id)
     }
 
+    async update(id: string): Promise<void> {
+        //const filho = await this.repository.update()
+    }
+
 }
 export { FilhosRepository }

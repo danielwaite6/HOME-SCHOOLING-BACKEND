@@ -3,11 +3,13 @@ import { Category } from '../modules/cars/entities/Category';
 import { Car } from '../modules/cars/entities/Car';
 import { Specification } from '../modules/cars/entities/Specification';
 import { Filho } from '../modules/cars/entities/Filho';
+import { Activitys } from '../modules/cars/entities/Activitys';
 
 import { CreateCategories1662308680053 } from '../database/migrations/1662308680053-CreateCategories';
 import { CreateCars1662516676249 } from '../database/migrations/1662516676249-CreateCars';
 import { CreateSpecifications1662515145406 } from '../database/migrations/1662515145406-CreateSpecifications';
 import { CreateFilho1662685219496 } from '../database/migrations/1662685219496-CreateFilho';
+import { CreateActivitys1664760018260 } from '../database/migrations/1664760018260-CreateActivitys';
 
 
 
@@ -17,12 +19,13 @@ const dataSource = new DataSource({
     username: "postgres",
     password: "postgres",
     database: "postgres",
-    entities: [Category, Specification, Car, Filho],
+    entities: [Category, Specification, Car, Filho, Activitys],
     migrations: [
         CreateCategories1662308680053,
         CreateSpecifications1662515145406,
         CreateCars1662516676249,
         CreateFilho1662685219496,
+        CreateActivitys1664760018260,
     ],
 });
 /*
