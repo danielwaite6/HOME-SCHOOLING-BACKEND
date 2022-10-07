@@ -7,7 +7,7 @@ class ListFilhosController {
 
     async handle(req: Request, res: Response): Promise<Response> {
 
-        const { mae_id } = req.body
+        const { mae_id } = req.query
         console.log('mae_id: ', mae_id);
 
 
