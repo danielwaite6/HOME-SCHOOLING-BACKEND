@@ -13,7 +13,7 @@ const listFilhosController = new ListFilhosController()
 const deleteFilhosController = new DeleteFilhosController()
 
 filhosRoutes.post('/', createFilhoController.handle)
-filhosRoutes.get('/', listFilhosController.handle)
+filhosRoutes.get('/:mae_id', listFilhosController.handle)
 filhosRoutes.delete('/:id', deleteFilhosController.handle)
 
 
