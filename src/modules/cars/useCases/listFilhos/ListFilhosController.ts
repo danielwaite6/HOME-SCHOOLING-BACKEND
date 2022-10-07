@@ -7,8 +7,8 @@ class ListFilhosController {
 
     async handle(req: Request, res: Response): Promise<Response> {
 
-        const { mae_id } = req.params
-        console.log('req.params: ', mae_id);
+        const { mae_id } = req.query
+        console.log('req.query: ', mae_id);
 
 
         const listFilhosUseCase = container.resolve(ListFilhosUseCase)
