@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { CreateFilhoController } from '../modules/cars/useCases/createFilho/CreateFilhoController'
 import { ListFilhosController } from '../modules/cars/useCases/listFilhos/ListFilhosController'
+import { ListFilhosControllerSimple } from '../modules/cars/useCases/listFilhosSimple/ListFilhosControllerSimple'
 import { DeleteFilhosController } from '../modules/cars/useCases/deleteFilhos/DeleteFilhosController'
 
 
@@ -10,10 +11,12 @@ const filhosRoutes = Router()
 
 const createFilhoController = new CreateFilhoController()
 const listFilhosController = new ListFilhosController()
+const listFilhosControllerSimple = new ListFilhosControllerSimple()
 const deleteFilhosController = new DeleteFilhosController()
 
 filhosRoutes.post('/', createFilhoController.handle)
 filhosRoutes.delete('/:id', deleteFilhosController.handle)
+filhosRoutes.get('/', listFilhosControllerSimple.handle)
 filhosRoutes.get('/:mae_id', listFilhosController.handle)
 
 
