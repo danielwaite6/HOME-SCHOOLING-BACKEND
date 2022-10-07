@@ -26,6 +26,12 @@ class FilhosRepository implements IFilhosRepository {
         const filhos = await this.repository.find()
         return filhos
     }
+    async listWithWhere(mae_id: string): Promise<Filho[]> {
+        const filhos = await this.repository.createQueryBuilder("filhos")
+            .where("filhos.mae_id = :mae_id", { mae_id: mae_id })
+            .getMany()
+        return filhos
+    }
 
     async delete(id: string): Promise<void> {
         const filho = await this.repository.delete(id)

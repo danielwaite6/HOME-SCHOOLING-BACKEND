@@ -6,6 +6,11 @@ import { ListFilhosUseCase } from './ListFilhosUseCase'
 class ListFilhosController {
 
     async handle(req: Request, res: Response): Promise<Response> {
+
+        const { mae_id } = req.body
+        console.log('mae_id: ', mae_id);
+
+
         const listFilhosUseCase = container.resolve(ListFilhosUseCase)
         const all = await listFilhosUseCase.execute()
 
