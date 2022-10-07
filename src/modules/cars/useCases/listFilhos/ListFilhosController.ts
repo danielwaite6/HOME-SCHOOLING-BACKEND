@@ -12,7 +12,7 @@ class ListFilhosController {
 
 
         const listFilhosUseCase = container.resolve(ListFilhosUseCase)
-        const all = await listFilhosUseCase.execute()
+        const all = await listFilhosUseCase.execute(mae_id)
 
         return res.json(all)
     }

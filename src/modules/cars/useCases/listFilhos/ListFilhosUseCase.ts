@@ -10,8 +10,8 @@ class ListFilhosUseCase {
         private filhosRepository: IFilhosRepository
     ) { }
 
-    async execute(): Promise<Filho[]> {
-        const filhos = await this.filhosRepository.list()
+    async execute(mae_id: string): Promise<Filho[]> {
+        const filhos = await this.filhosRepository.listWithWhere(mae_id)
         return filhos
     }
 }
