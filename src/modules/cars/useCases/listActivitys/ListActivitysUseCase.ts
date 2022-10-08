@@ -18,7 +18,7 @@ class ListActivitysUseCase {
 
     async execute(mae_id: string, filho_id: string): Promise<Activitys[]> {
 
-        console.log('mae_id, filho_id: ', mae_id, filho_id);
+        console.log('req.params - ListActivitysUseCase: ', mae_id, filho_id);
 
         const cars = await this.activitysRepository.listWithWhere(mae_id, filho_id)
         return cars
