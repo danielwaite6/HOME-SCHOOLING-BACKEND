@@ -33,10 +33,20 @@ class ActivitysRepository implements IActivitysRepository {
         return activity
     }*/
     async listWithWhere(mae_id: string, filho_id: string): Promise<Activitys[]> {
+
+        console.log(mae_id);
+        console.log(filho_id);
+
         const activity = await this.repository.createQueryBuilder("activitys")
             .where("activitys.mae_id = :mae_id", { mae_id })
             .where("activitys.filho_id = :filho_id", { filho_id })
-            .getMany()
+            .getMany();
+
+
+        console.log("===================");
+        console.log("===================");
+        console.log("===================");
+        console.log(activity);
         return activity
     }
 

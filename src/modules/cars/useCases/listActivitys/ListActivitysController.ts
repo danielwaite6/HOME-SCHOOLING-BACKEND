@@ -16,7 +16,7 @@ class ListActivitysController {
 
         const activitys = await listActivitysUseCase.execute(mae_id, filho_id)
 
-        console.log(activitys);
+
 
 
         return res.status(201).json(activitys)
