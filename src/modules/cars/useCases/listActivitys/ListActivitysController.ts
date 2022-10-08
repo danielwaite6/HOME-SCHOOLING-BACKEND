@@ -9,7 +9,7 @@ class ListActivitysController {
         const filho_id = req.params.filho_id;
 
 
-
+        console.log('req.params -: ', mae_id, filho_id);
 
 
         const listActivitysUseCase = container.resolve(ListActivitysUseCase)
