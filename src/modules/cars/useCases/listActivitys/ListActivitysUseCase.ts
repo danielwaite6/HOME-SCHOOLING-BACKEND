@@ -1,5 +1,5 @@
-import { inject, injectable } from 'tsyringe'
 import "reflect-metadata";
+import { inject, injectable } from 'tsyringe'
 import { IActivitysRepository } from "../../repositories/IActivitysRepository"
 import { Activitys } from 'modules/cars/entities/Activitys';
 
@@ -16,8 +16,8 @@ class ListActivitysUseCase {
         private activitysRepository: IActivitysRepository
     ) { }
 
-    async execute(): Promise<Activitys[]> {
-        const cars = await this.activitysRepository.list()
+    async execute(mae_id: string, filho_id: string): Promise<Activitys[]> {
+        const cars = await this.activitysRepository.listWithWhere(mae_id, filho_id)
         return cars
     }
 }

@@ -28,10 +28,26 @@ class ActivitysRepository implements IActivitysRepository {
 
     }
 
-    async list(): Promise<Activitys[]> {
+    /*async list(): Promise<Activitys[]> {
         const activity = await this.repository.find()
         return activity
+    }*/
+    async listWithWhere(mae_id: string, filho_id: string): Promise<Activitys[]> {
+        const activity = await this.repository.createQueryBuilder("activitys")
+            .where("activitys.mae_id = :mae_id", { mae_id })
+            .where("activitys.filho_id = :filho_id", { filho_id })
+            .getMany()
+        return activity
     }
+
+    /**async listWithWhere(mae_id: string): Promise<Filho[]> {
+        const filhos = await this.repository.createQueryBuilder("filhos")
+            .where("filhos.mae_id = :mae_id", { mae_id: mae_id })
+            .getMany()
+        return filhos
+    } */
+
+
     //create(data: ICreateActivityDTO): Promise<Activitys>
     /*async create({ atividadeEducativa, dia, filho_id, hora, mae_id, name, observacoes }: ICreateActivityDTO): Promise<Activitys> {
         const filho = this.repository.create({ mae_id, name })
