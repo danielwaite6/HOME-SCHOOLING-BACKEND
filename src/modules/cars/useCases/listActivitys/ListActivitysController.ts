@@ -12,10 +12,12 @@ class ListActivitysController {
 
 
 
-        /*const listActivitysUseCase = container.resolve(ListActivitysUseCase)
+        const listActivitysUseCase = container.resolve(ListActivitysUseCase)
+
         const activitys = await listActivitysUseCase.execute(mae_id, filho_id)
-        return res.status(201).json(activitys)*/
-        return res.status(201).json({})
+
+        return res.status(201).json(activitys)
+        //return res.status(201).json({})
     }
 }
 export { ListActivitysController }
