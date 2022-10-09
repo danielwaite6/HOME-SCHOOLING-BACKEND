@@ -16,8 +16,8 @@ class ListActivitysUseCase {
         private activitysRepository: IActivitysRepository
     ) { }
 
-    async execute(mae_id: string, filho_id: string, dataInicial: string, dataFinal: string): Promise<Activitys[]> {
-        const activitys = await this.activitysRepository.listWithWhere(mae_id, filho_id, dataInicial, dataFinal)
+    async execute(mae_id: string, filho_id: string): Promise<Activitys[]> {
+        const activitys = await this.activitysRepository.listWithWhere(mae_id, filho_id)
         return activitys
     }
 }

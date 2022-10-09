@@ -32,7 +32,7 @@ class ActivitysRepository implements IActivitysRepository {
         const activity = await this.repository.find()
         return activity
     }*/
-    async listWithWhere(mae_id: string, filho_id: string, dataInicial: string, dataFinal: string): Promise<Activitys[]> {
+    async listWithWhere(mae_id: string, filho_id: string): Promise<Activitys[]> {
 
 
 

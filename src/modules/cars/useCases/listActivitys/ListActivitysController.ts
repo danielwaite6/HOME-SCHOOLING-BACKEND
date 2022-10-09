@@ -8,13 +8,12 @@ class ListActivitysController {
 
         const mae_id = req.params.mae_id;
         const filho_id = req.params.filho_id;
-        const dataInicial = req.params.dataInicial;
-        const dataFinal = req.params.dataFinal;
+
 
 
         const listActivitysUseCase = container.resolve(ListActivitysUseCase)
 
-        const activitys = await listActivitysUseCase.execute(mae_id, filho_id, dataInicial, dataFinal)
+        const activitys = await listActivitysUseCase.execute(mae_id, filho_id)
 
 
 
