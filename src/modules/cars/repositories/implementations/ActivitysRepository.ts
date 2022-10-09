@@ -40,8 +40,8 @@ class ActivitysRepository implements IActivitysRepository {
             .where("activitys.mae_id = :mae_id", { mae_id })
             .where("activitys.filho_id = :filho_id", { filho_id })
 
-            .where("activitys.dia >= :dataInicial", { dataInicial })
-            .where("activitys.dia <= :dataFinal", { dataFinal })
+            //.where("activitys.dia >= :dataInicial", { dataInicial })
+            //.where("activitys.dia <= :dataFinal", { dataFinal })
 
 
             .getMany();
