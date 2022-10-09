@@ -8,6 +8,7 @@ const createActivitysController = new CreateActivitysController()
 const listActivitysController = new ListActivitysController()
 
 activitysRoutes.post('/', createActivitysController.handle)
-activitysRoutes.get('/:mae_id/:filho_id', listActivitysController.handle)
+activitysRoutes.get('/:mae_id/:filho_id/:dataInicial/:dataFinal', listActivitysController.handle)
 
 export { activitysRoutes }
+
