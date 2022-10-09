@@ -45,6 +45,7 @@ class ActivitysRepository implements IActivitysRepository {
 
 
             .getMany();
+        console.log('activity: ', activity);
 
         //       dataInicial   dataFinal
 
