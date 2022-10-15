@@ -10,6 +10,7 @@ import { CreateCars1662516676249 } from '../database/migrations/1662516676249-Cr
 import { CreateSpecifications1662515145406 } from '../database/migrations/1662515145406-CreateSpecifications';
 import { CreateFilho1662685219496 } from '../database/migrations/1662685219496-CreateFilho';
 import { CreateActivitys1664760018260 } from '../database/migrations/1664760018260-CreateActivitys';
+import { CreateActive1665866266949 } from '../database/migrations/1665866266949-CreateActive';
 
 
 
@@ -26,6 +27,7 @@ const dataSource = new DataSource({
         CreateCars1662516676249,
         CreateFilho1662685219496,
         CreateActivitys1664760018260,
+        CreateActive1665866266949,
     ],
 });
 /*

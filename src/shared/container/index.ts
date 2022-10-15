@@ -19,6 +19,10 @@ import { IActivitysRepository } from '../../modules/cars/repositories/IActivitys
 import { ActivitysRepository } from '../../modules/cars/repositories/implementations/ActivitysRepository'
 
 
+import { IActiveRepository } from '../../modules/cars/repositories/IActiveRepository'
+import { ActiveRepository } from '../../modules/cars/repositories/implementations/ActiveRepository'
+
+
 container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository", CategoriesRepository
 )
@@ -37,6 +41,10 @@ container.registerSingleton<IFilhosRepository>(
 
 container.registerSingleton<IActivitysRepository>(
     "ActivitysRepository", ActivitysRepository
+)
+
+container.registerSingleton<IActiveRepository>(
+    "ActiveRepository", ActiveRepository
 )
 
 
