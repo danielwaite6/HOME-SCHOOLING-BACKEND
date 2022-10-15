@@ -24,6 +24,8 @@ docker exec database cat /etc/hosts
 
 npm run typeorm migration:generate -n CreateActivitys
 
+npm run migration:run
+
 npm install --save-dev typescript     ===== MODO DESENVOLVIMENTO
 npm install --save uuid               ===== MODO PRODUCAO
 

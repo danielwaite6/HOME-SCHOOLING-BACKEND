@@ -32,22 +32,14 @@ class ActiveRepository implements IActiveRepository {
         const activity = await this.repository.find()
         return activity
     }*/
-    async listWithWhere(mae_id: string, filho_id: string): Promise<Active[]> {
+    async listWithWhere(user_id: string, originalAppUserId: string): Promise<Active[]> {
 
-
-
-        const activity = await this.repository.createQueryBuilder("activitys")
-            .where("activitys.mae_id = :mae_id", { mae_id })
-            .where("activitys.filho_id = :filho_id", { filho_id })
-
-            //.where("activitys.dia >= :dataInicial", { dataInicial })
-            //.where("activitys.dia <= :dataFinal", { dataFinal })
-
-
+        const activity = await this.repository.createQueryBuilder("active")
+            .where("active.user_id = :user_id", { user_id })
             .getMany();
+        //.where("activitys.dia >= :dataInicial", { dataInicial })
+        //.where("activitys.dia <= :dataFinal", { dataFinal })
         console.log('activity: ', activity);
-
-        //       dataInicial   dataFinal
 
         return activity
     }
