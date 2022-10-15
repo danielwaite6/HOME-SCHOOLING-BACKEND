@@ -4,6 +4,7 @@ import { Car } from '../modules/cars/entities/Car';
 import { Specification } from '../modules/cars/entities/Specification';
 import { Filho } from '../modules/cars/entities/Filho';
 import { Activitys } from '../modules/cars/entities/Activitys';
+import { Active } from '../modules/cars/entities/Active';
 
 import { CreateCategories1662308680053 } from '../database/migrations/1662308680053-CreateCategories';
 import { CreateCars1662516676249 } from '../database/migrations/1662516676249-CreateCars';
@@ -20,7 +21,7 @@ const dataSource = new DataSource({
     username: "postgres",
     password: "postgres",
     database: "postgres",
-    entities: [Category, Specification, Car, Filho, Activitys],
+    entities: [Category, Specification, Car, Filho, Activitys, Active],
     migrations: [
         CreateCategories1662308680053,
         CreateSpecifications1662515145406,
