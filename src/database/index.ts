@@ -14,7 +14,6 @@ import { CreateActivitys1664760018260 } from '../database/migrations/16647600182
 import { CreateActive1665866266949 } from '../database/migrations/1665866266949-CreateActive';
 
 
-
 const dataSource = new DataSource({
     type: "postgres",
     port: 5432,

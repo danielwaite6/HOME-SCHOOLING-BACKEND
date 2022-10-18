@@ -12,14 +12,14 @@ class ActiveRepository implements IActiveRepository {
     constructor() {
         this.repository = dataSource.getRepository(Active)
     }
-    async create({ user_id, originalAppUserId }: ICreateActiveDTO): Promise<Active> {
+    async create({ user_id, originalAppUserId, ativo }: ICreateActiveDTO): Promise<Active> {
 
         try {
 
-            const activityes = this.repository.create({ user_id, originalAppUserId })
-            const activitye = await this.repository.save(activityes)
+            const actives = this.repository.create({ user_id, originalAppUserId, ativo })
+            const active = await this.repository.save(actives)
 
-            return activitye
+            return active
 
         } catch (error) {
             console.log('Error: ', error);
@@ -32,14 +32,14 @@ class ActiveRepository implements IActiveRepository {
         const activity = await this.repository.find()
         return activity
     }*/
-    async listWithWhere(user_id: string, originalAppUserId: string): Promise<Active[]> {
+    async listWithWhere(user_id: string, _: string): Promise<Active[]> {
 
         const activity = await this.repository.createQueryBuilder("active")
             .where("active.user_id = :user_id", { user_id })
             .getMany();
         //.where("activitys.dia >= :dataInicial", { dataInicial })
         //.where("activitys.dia <= :dataFinal", { dataFinal })
-        console.log('activity: ', activity);
+        //console.log('activity: ', activity);
 
         return activity
     }

@@ -6,10 +6,12 @@ import { CreateActiveUseCase } from './CreateActiveUseCase';
 class CreateActiveController {
 
     async handle(req: Request, res: Response): Promise<Response> {
-        const { user_id, originalAppUserId } = req.body
+        const { user_id, originalAppUserId, ativo } = req.body
+        console.log('user_id, originalAppUserId, ativo: ', user_id, originalAppUserId, ativo);
+
 
         const createActiveUseCase = container.resolve(CreateActiveUseCase)
-        await createActiveUseCase.execute({ user_id, originalAppUserId })
+        await createActiveUseCase.execute({ user_id, originalAppUserId, ativo })
         return res.status(201).send()
     }
 

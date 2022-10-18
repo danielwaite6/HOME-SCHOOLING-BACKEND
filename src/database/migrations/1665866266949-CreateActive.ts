@@ -21,6 +21,10 @@ export class CreateActive1665866266949 implements MigrationInterface {
                         name: "originalAppUserId",
                         type: "varchar",
                     },
+                    {
+                        name: "ativo",
+                        type: "boolean",
+                    },
                 ],
             })
         )

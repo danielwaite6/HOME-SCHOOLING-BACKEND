@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm'
+import { Column, Entity, PrimaryColumn } from 'typeorm'
 import { v4 as uuidV4 } from 'uuid'
 
 @Entity({ name: 'active' })
@@ -12,6 +12,9 @@ class Active {
 
     @Column()
     originalAppUserId: string;
+
+    @Column()
+    ativo: string;
 
     /*@CreateDateColumn()
     created_at: Date;*/
