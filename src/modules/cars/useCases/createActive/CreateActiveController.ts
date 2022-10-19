@@ -12,6 +12,7 @@ class CreateActiveController {
         console.log('req.params.id: ', id);
 
         console.log('req.params.id: ', req.params);
+        console.log('req.params.id: ', req.body);
 
 
         // const createActiveUseCase = container.resolve(CreateActiveUseCase)
