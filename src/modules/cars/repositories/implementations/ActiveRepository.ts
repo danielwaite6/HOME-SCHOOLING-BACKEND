@@ -12,6 +12,7 @@ class ActiveRepository implements IActiveRepository {
     constructor() {
         this.repository = dataSource.getRepository(Active)
     }
+
     async create({ user_id, originalAppUserId, ativo }: ICreateActiveDTO): Promise<Active> {
 
         try {
@@ -29,10 +30,7 @@ class ActiveRepository implements IActiveRepository {
 
     }
 
-    /*async list(): Promise<Activitys[]> {
-        const activity = await this.repository.find()
-        return activity
-    }*/
+
     async listWithWhere(user_id: string, _: string): Promise<Active[]> {
 
         const activity = await this.repository.createQueryBuilder("active")
@@ -46,7 +44,10 @@ class ActiveRepository implements IActiveRepository {
     }
 
 
-
+    async list(): Promise<Active[]> {
+        const active = await this.repository.find()
+        return active
+    }
 
 }
 export { ActiveRepository }
