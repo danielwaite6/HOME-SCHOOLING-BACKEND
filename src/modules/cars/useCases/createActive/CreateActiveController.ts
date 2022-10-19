@@ -11,6 +11,8 @@ class CreateActiveController {
         let id = req.params.id;
         console.log('req.params.id: ', id);
 
+        console.log('req.params.id: ', req.params);
+
 
         // const createActiveUseCase = container.resolve(CreateActiveUseCase)
         // await createActiveUseCase.execute({ user_id, originalAppUserId, ativo })
