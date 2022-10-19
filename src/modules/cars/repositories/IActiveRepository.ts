@@ -2,6 +2,7 @@ import { ICreateActiveDTO } from "../dtos/ICreateActiveDTO"
 import { Active } from "../entities/Active"
 
 interface IActiveRepository {
+    //user_id, originalAppUserId, ativo
     create({ user_id, originalAppUserId, ativo }: ICreateActiveDTO): Promise<Active>;
     //list(): Promise<Activitys[]>;
     listWithWhere(user_id: string, originalAppUserId: string): Promise<Active[]>

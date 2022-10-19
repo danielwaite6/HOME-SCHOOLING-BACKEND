@@ -19,6 +19,7 @@ class ActiveRepository implements IActiveRepository {
             const actives = this.repository.create({ user_id, originalAppUserId, ativo })
             const active = await this.repository.save(actives)
 
+
             return active
 
         } catch (error) {

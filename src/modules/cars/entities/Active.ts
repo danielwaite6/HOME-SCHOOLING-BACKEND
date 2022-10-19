@@ -14,7 +14,7 @@ class Active {
     originalAppUserId: string;
 
     @Column()
-    ativo: string;
+    ativo: boolean;
 
     /*@CreateDateColumn()
     created_at: Date;*/
