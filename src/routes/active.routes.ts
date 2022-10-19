@@ -7,7 +7,13 @@ const activeRoutes = Router()
 const createActiveController = new CreateActiveController()
 const listActiveController = new ListActiveController()
 
-activeRoutes.post('/', createActiveController.handle)
+//activeRoutes.post('/', createActiveController.handle)
+
+
+activeRoutes.patch('/:id', createActiveController.handle)
+
+
+
 
 activeRoutes.get('/:user_id', listActiveController.handle)
 
