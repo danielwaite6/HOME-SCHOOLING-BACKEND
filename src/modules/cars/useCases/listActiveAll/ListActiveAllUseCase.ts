@@ -18,7 +18,7 @@ class ListActiveAllUseCase {
 
     async execute(): Promise<Active[]> {
         const active = await this.activeRepository.list()
-        console.log(active);
+        //console.log(active);
 
         return active
     }

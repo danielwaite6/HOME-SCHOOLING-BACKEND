@@ -5,6 +5,7 @@ import { Specification } from '../modules/cars/entities/Specification';
 import { Filho } from '../modules/cars/entities/Filho';
 import { Activitys } from '../modules/cars/entities/Activitys';
 import { Active } from '../modules/cars/entities/Active';
+import { Email } from '../modules/cars/entities/Email';
 
 import { CreateCategories1662308680053 } from '../database/migrations/1662308680053-CreateCategories';
 import { CreateCars1662516676249 } from '../database/migrations/1662516676249-CreateCars';
@@ -12,6 +13,7 @@ import { CreateSpecifications1662515145406 } from '../database/migrations/166251
 import { CreateFilho1662685219496 } from '../database/migrations/1662685219496-CreateFilho';
 import { CreateActivitys1664760018260 } from '../database/migrations/1664760018260-CreateActivitys';
 import { CreateActive1665866266949 } from '../database/migrations/1665866266949-CreateActive';
+import { CreateEmailUsers1666216408581 } from '../database/migrations/1666216408581-CreateEmailUsers';
 
 
 const dataSource = new DataSource({
@@ -20,7 +22,7 @@ const dataSource = new DataSource({
     username: "postgres",
     password: "postgres",
     database: "postgres",
-    entities: [Category, Specification, Car, Filho, Activitys, Active],
+    entities: [Category, Specification, Car, Filho, Activitys, Active, Email],
     migrations: [
         CreateCategories1662308680053,
         CreateSpecifications1662515145406,
@@ -28,6 +30,7 @@ const dataSource = new DataSource({
         CreateFilho1662685219496,
         CreateActivitys1664760018260,
         CreateActive1665866266949,
+        CreateEmailUsers1666216408581,
     ],
 });
 /*

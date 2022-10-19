@@ -22,6 +22,9 @@ import { ActivitysRepository } from '../../modules/cars/repositories/implementat
 import { IActiveRepository } from '../../modules/cars/repositories/IActiveRepository'
 import { ActiveRepository } from '../../modules/cars/repositories/implementations/ActiveRepository'
 
+import { IEmailUsersRepository } from '../../modules/cars/repositories/IEmailUsersRepository'
+import { EmailUsersRepository } from '../../modules/cars/repositories/implementations/EmailUsersRepository'
+
 
 container.registerSingleton<ICategoriesRepository>(
     "CategoriesRepository", CategoriesRepository
@@ -45,6 +48,10 @@ container.registerSingleton<IActivitysRepository>(
 
 container.registerSingleton<IActiveRepository>(
     "ActiveRepository", ActiveRepository
+)
+
+container.registerSingleton<IEmailUsersRepository>(
+    "EmailUsersRepository", EmailUsersRepository
 )
 
 
