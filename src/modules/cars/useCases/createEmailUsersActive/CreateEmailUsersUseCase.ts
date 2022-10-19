@@ -1,32 +1,31 @@
 import "reflect-metadata";
 import { inject, injectable } from 'tsyringe'
-import { IActiveRepository } from '../../repositories/IActiveRepository'
-import { Active } from 'modules/cars/entities/Active';
+import { IEmailUsersRepository } from '../../repositories/IEmailUsersRepository'
+import { Email } from 'modules/cars/entities/Email';
 
 
 interface IRequest {
     user_id: string,
-    originalAppUserId: string,
-    ativo: boolean,
+    email: string,
 }
 
 @injectable()
 class CreateEmailUsersUseCase {
 
     constructor(
-        @inject("ActiveRepository")
-        private activeRepository: IActiveRepository
+        @inject("EmailUsersRepository")
+        private emailUsersRepository: IEmailUsersRepository
     ) { }
 
-    async execute({ user_id, originalAppUserId, ativo }: IRequest): Promise<Active> {
-        console.log(user_id, originalAppUserId, ativo);
+    async execute({ user_id, email }: IRequest): Promise<Email> {
+
 
         /*const filhoAlreadyExists = await this.filhosRepository.findByName(name)
         if (filhoAlreadyExists) {
             throw new Error("Specification Already Exists");
         }*/
         try {
-            const active = await this.activeRepository.create({ user_id, originalAppUserId, ativo })
+            const active = await this.emailUsersRepository.create({ user_id, email })
             return active
         } catch (error) {
             console.log("error: ", error);
