@@ -17,7 +17,7 @@ class UpdateFilhosUseCase {
         private filhosRepository: IFilhosRepository
     ) { }
 
-    async execute({ name, id_filho }: IRequest): Promise<Filho> {
+    async execute({ name, id_filho }: IRequest): Promise<void> {
         //console.log(name);
 
         /*const filhoAlreadyExists = await this.filhosRepository.findByName(name)
@@ -26,7 +26,7 @@ class UpdateFilhosUseCase {
         }*/
         try {
             const filho = await this.filhosRepository.update(name, id_filho)
-            return filho
+
         } catch (error) {
             console.log("error: ", error);
         }
