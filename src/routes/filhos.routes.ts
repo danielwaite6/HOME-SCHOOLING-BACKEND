@@ -17,7 +17,7 @@ const deleteFilhosController = new DeleteFilhosController()
 const updateFilhosController = new UpdateFilhosController()
 
 filhosRoutes.post('/', createFilhoController.handle)
-filhosRoutes.patch('/:name', updateFilhosController.handle)
+filhosRoutes.patch('/:id_filho', updateFilhosController.handle)
 
 
 

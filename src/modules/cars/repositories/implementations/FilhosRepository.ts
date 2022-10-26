@@ -37,8 +37,14 @@ class FilhosRepository implements IFilhosRepository {
         const filho = await this.repository.delete(id)
     }
 
-    async update(name: string): Promise<void> {
-        //const filho = await this.repository.update()
+    async update(name: string, id_filho: string): Promise<void> {
+
+        await this.repository.createQueryBuilder()
+            .update(Filho)
+            .set({ name: name })
+            .where("id = :id", { id: id_filho })
+            .execute()
+
     }
 
 }

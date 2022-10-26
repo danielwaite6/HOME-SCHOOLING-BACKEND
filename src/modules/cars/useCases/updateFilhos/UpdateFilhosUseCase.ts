@@ -6,6 +6,7 @@ import { Filho } from 'modules/cars/entities/Filho';
 
 interface IRequest {
     name: string,
+    id_filho: string,
 }
 
 @injectable()
@@ -16,7 +17,7 @@ class UpdateFilhosUseCase {
         private filhosRepository: IFilhosRepository
     ) { }
 
-    async execute({ name }: IRequest): Promise<Filho> {
+    async execute({ name, id_filho }: IRequest): Promise<Filho> {
         //console.log(name);
 
         /*const filhoAlreadyExists = await this.filhosRepository.findByName(name)
@@ -24,7 +25,7 @@ class UpdateFilhosUseCase {
             throw new Error("Specification Already Exists");
         }*/
         try {
-            const filho = await this.filhosRepository.update(name)
+            const filho = await this.filhosRepository.update(name, id_filho)
             return filho
         } catch (error) {
             console.log("error: ", error);

@@ -6,14 +6,13 @@ import { UpdateFilhosUseCase } from './UpdateFilhosUseCase';
 class UpdateFilhosController {
 
     async handle(req: Request, res: Response): Promise<Response> {
-        const name = req.params.name
-        console.log('req.params.name: ', name);
-
+        const id_filho = req.params.id_filho
+        const { name } = req.body
 
         const updateFilhosUseCase = container.resolve(UpdateFilhosUseCase)
 
 
-        await updateFilhosUseCase.execute({ name })
+        await updateFilhosUseCase.execute({ name, id_filho })
         return res.status(201).send()
     }
 

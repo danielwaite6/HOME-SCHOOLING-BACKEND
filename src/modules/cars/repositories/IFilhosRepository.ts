@@ -12,8 +12,10 @@ interface IFilhosRepository {
     list(): Promise<Filho[]>;
     listWithWhere(mae_id: string): Promise<Filho[]>;
     delete(id: string): Promise<void>;
-    update(name: string): Promise<Filho>;
+    update(name: string, id_filho: string): Promise<void>;
 }
 
 
 export { IFilhosRepository, ICreateFilhosDTO }
+
+
